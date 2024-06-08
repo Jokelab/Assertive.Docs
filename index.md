@@ -3,25 +3,24 @@ title: Home
 layout: home
 ---
 
-This is a *bare-minimum* template to create a Jekyll site that uses the [Just the Docs] theme. You can easily set the created site to be published on [GitHub Pages] – the [README] file explains how to do that, along with other details.
+# Assertive Script
+Welcome to the home of the documentation for the Assertive scripting language: a domain specific language (DSL) that targets the domain of HTTP requests. Assertive allows you to create test cases by *asserting* properties of a response.
 
-If [Jekyll] is installed on your computer, you can also build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^1] And you will be able to deploy your local build to a different platform than GitHub Pages.
+## Why yet another language?
+While there are several great tools available for HTTP request testing, they seem to be rather limited when it comes to integration into the software development lifecycle of the product they belong to. To overcome this gap, Assertive is built with the following principles in mind:
 
-More specifically, the created site:
+### Automation
+Having a test definition is one thing, but how cool is it when you can parameterize your tests with ease and run them anywhere you like: on your local machine, in the cloud or on a build server as part of your DevOps pipeline. 
 
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
+### Versioning and collaboration
+Versioning of any software artifact should happen where it belongs: in a version control system such as GIT. There is a 1-to-1 relationship between tests and the code you're testing so it makes sense to keep them inline. Having your tests inside a VCS makes sure you can easily distribute your tests to 
 
-Other than that, you're free to customize sites that you create with this template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
+### Ease of use
+Tests should be available in your IDE, so you can execute them whenever you need them.
 
 [Browse our documentation][Just the Docs] to learn more about how to use this theme.
 
-To get started with creating a site, simply:
 
-1. click "[use this template]" to create a GitHub repository
-2. go to Settings > Pages > Build and deployment > Source, and select GitHub Actions
-
-If you want to maintain your docs in the `docs` directory of an existing project repo, see [Hosting your docs from an existing project repo](https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md#hosting-your-docs-from-an-existing-project-repo) in the template README.
 
 ----
 
