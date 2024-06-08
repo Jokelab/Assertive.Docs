@@ -7,10 +7,10 @@ layout: home
 Welcome to the home of the documentation for the Assertive scripting language: a domain specific language (DSL) that targets the domain of HTTP requests. Assertive allows you to create test cases by *asserting* properties of a response.
 
 ## Why yet another language?
-While there are several great tools available for HTTP request testing, they seem to be rather limited when it comes to integration into the software development lifecycle of the product they belong to. To overcome this gap, Assertive is built with the following principles in mind:
+While there are several great tools available for HTTP request testing, they seem to be rather limited when it comes to integration into the software development lifecycle. To overcome this gap, Assertive is built with the following principles in mind:
 
-### Automation
-Having a test definition is one thing, but how cool is it when you can parameterize your tests with ease and run them anywhere you like: on your local machine, in the cloud or on a build server as part of your DevOps pipeline. 
+### Automate everything
+Having a test definition is one thing, but running it manually in a DevOps powered world is not a good idea. Assertive scripts can run anywhere you like without modification: on your local machine, in the cloud or on a build server as part of your DevOps pipeline. 
 
 ### Versioning and collaboration
 Versioning of any software artifact should happen where it belongs: in a version control system such as GIT. There is a 1-to-1 relationship between tests and the code you're testing so it makes sense to keep them inline. Having your tests inside a VCS makes sure you can easily distribute your tests to 
