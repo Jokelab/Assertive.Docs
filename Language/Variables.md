@@ -1,9 +1,12 @@
 ---
 layout: default
-title: Assignment statement
+title: Variables
 parent: Language
-nav_order: 2
+nav_order: 20
 ---
+
+# Variables
+Naming: $ ID
 
 # Assignment statement
 ```
