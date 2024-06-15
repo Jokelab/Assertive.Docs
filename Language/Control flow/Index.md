@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Control flow
-Parent: Language
+parent: Language
 has_children: true
 nav_order: 1
 ---
