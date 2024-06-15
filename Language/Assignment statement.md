@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Assignment statement
-Parent: Language
+parent: Language
 nav_order: 2
 ---
 

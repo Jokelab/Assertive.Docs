@@ -1,7 +1,8 @@
 ---
 layout: default
 title: If statement
-Parent: Control flow
+parent: Control flow
+grand_parent: Language
 nav_order: 1
 ---
 
