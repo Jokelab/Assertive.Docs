@@ -1,7 +1,7 @@
 ---
 title: Getting started
 layout: default
-nav_order: 4
+nav_order: 20
 ---
 # Hello world!
 Every language should start with a decent Hello world. Assertive is no exception:
