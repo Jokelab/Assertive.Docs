@@ -6,16 +6,20 @@ nav_order: 20
 ---
 
 # Variables
-Variables allow you to temporarily store information during the execution of a script.
+Variables are very common in every programming language. Assertive supports variables to enable temporary storage of information during the execution of a script. 
+A variable always starts with a dollar sign (**$**) and is followed by one or more alphanumeric characters, for example: 
 
-## Syntax
-A variable always starts with the dollar sign ($) and is followed by one or more alphanumeric characters. The first character can't be a digit. 
-Or more formally:
 ```
-$[a-zA-Z_][a-zA-Z0-9_]*
+$myVariable
 ```
 
-# Assignment statements
+
+# Syntax of an an assignment statement
+```
+[variable] = [expression];
+```
+
+## Examples
 
 ```
 $x = "value for x"; //x will be a string
