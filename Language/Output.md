@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Asserts
+title: Output
 parent: Language
 nav_order: 50
 ---
