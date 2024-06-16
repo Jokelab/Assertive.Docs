@@ -14,7 +14,7 @@ An import statement must be at the top of an Assertive file.
 import string;
 ```
 
-## Examples:
+## Examples
 ```
 import "headers.ass";
 import "subfolder/genericfunctions.ass";

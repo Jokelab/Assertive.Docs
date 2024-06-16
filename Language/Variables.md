@@ -14,7 +14,7 @@ $myVariable
 ```
 
 
-# Syntax of an an assignment statement
+## Assignment statement
 ```
 [variable] = [expression];
 ```
@@ -23,5 +23,6 @@ $myVariable
 
 ```
 $x = "value for x"; //x will be a string
-$y = 1337; //y will be numeric
+$y = 1337;          //y will be numeric
+$res = GET "http://myapi.com/v1"; // HTTP Request and response 
 ```
