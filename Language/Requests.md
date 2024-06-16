@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Requests
+title: HTTP Requests
 parent: Language
 nav_order: 30
 ---
 
-# Requests
-HTTP requests are a primary citizen in the Assertive Scripting language.
+# HTTP Requests
+HTTP requests are primary citizens in the Assertive Scripting language.
