@@ -1,0 +1,28 @@
+---
+layout: default
+title: Conditionals
+parent: Language
+nav_order: 6
+---
+
+
+# Conditional statements
+Conditional statements allow you to execute certain statements based on a condition.
+
+## Syntax
+```
+if ( [expression] ) { [statement]* } (else { [statement]* })?
+```
+
+Expressions must be boolean expressions.
+
+
+## Examples
+```
+if ($x = 1){
+ //do stuff    
+}
+else{
+//do something else    
+}
+```

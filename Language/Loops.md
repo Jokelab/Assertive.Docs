@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Loop statement
-parent: Control flow
-grand_parent: Language
-nav_order: 3
+title: Loops
+parent: Language
+nav_order: 8
 ---
 
-# Loop statement
+# Loop statements
 There are different loop constructs within the Assertive scripting language.
+

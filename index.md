@@ -7,6 +7,12 @@ nav_order: 2
 # Assertive Script
 Welcome to the home of the documentation for the Assertive scripting language: a domain specific language (DSL) that targets HTTP request testing. Assertive allows you to create test cases by *asserting* properties of a response.
 
+## A piece of code says > 1000 words
+```
+![](assets/img/example.jpeg)
+```
+
+
 ## Why yet another language?
 While there are several great tools available for HTTP request testing, they seem to be rather limited when it comes to integration into the software development lifecycle. To overcome this gap, Assertive is built with the following principles in mind:
 

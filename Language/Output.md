@@ -15,9 +15,9 @@ output [expression] ;
 
 ## Examples
 ```
-output (3 - 1) * 5;
-output $myVar;
-output calculateNumber(1, 2);
+out (3 - 1) * 5;
+out $myVar;
+out calculateNumber(1, 2);
 ```
 
 

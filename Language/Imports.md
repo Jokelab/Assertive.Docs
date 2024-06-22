@@ -16,6 +16,7 @@ import string;
 
 ## Examples
 ```
-import "headers.ass";
-import "subfolder/genericfunctions.ass";
+import "file-in-current-folder.ass";
+import "subfolder/file-in-subfolder.ass";
+import "../file-in-parent-folder.ass";
 ```
