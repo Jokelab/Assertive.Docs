@@ -16,7 +16,7 @@ The high level syntax for HTTP requests is as follows.
 
 Example of a request with all options specified:
 ```
-POST 'https://www.testuri.com' 
+POST "https://www.testuri.com" 
     query {'id' : 1, 'name' :'Doe'}
     headers {'my-header': 'my-header-value'}
     body formdata {'Firstname': 'John', 'Lastname': 'Doe'} ;
@@ -28,7 +28,7 @@ GET | POST | PUT | DELETE | PATCH | OPTIONS | HEAD | TRACE | CONNECT
 It is also possible to provide a dynamically populated string value, as long as it can be parsed to one of the allowed values. The following example demonstrates this:
 ```
 $method = 'PO';
-'{{$method}}ST' 'https://www.testuri.com';
+'{{$method}}ST' "https://www.testuri.com";
 ```
 
 ### querySection
@@ -70,30 +70,30 @@ body (string | formurlencoded | formdata | stream)? [expression];
 This body kind can be used for textual data in the request body such as JSON content. The 'string' keyword can be omitted if Assertive detects a string expression. 
 ```
 //simple text:
-POST 'https://www.testuri.com' body string 'this is the content';
+POST "https://www.testuri.com" body string 'this is the content';
 
 //JSON content, string keyword omitted:
-POST 'https://www.testuri.com' body '{"key": "value"}';
+POST "https://www.testuri.com" body '{"key": "value"}';
 
 ```
 ** Body kind formurlencoded **
 This will send the request body as URL encoded string content:
 ```
-POST 'https://www.testuri.com' body formurlencoded {'Firstname': 'John', 'Lastname': 'Doe'};
+POST "https://www.testuri.com" body formurlencoded {'Firstname': 'John', 'Lastname': 'Doe'};
 ```
 
 ** Body kind formdata **
 The request body will be sent as multipart formdata when using the formdata keyword. It enables sending a request with a combination of string values and stream values in a single request.
 ```
-POST "https://webhook.site/a6c6dff5-11cd-4647-bec3-f9a771b79984" body formdata 
+POST "https://www.testuri.com" body formdata 
 {'Firstname': 'John', 'Lastname': 'Doe', 'image': FileToStream('image.bmp') }
 ```
 
 ** Body kind stream **
 Send a binary file in the request body. The 'stream' keyword can be omitted if Assertive detects a stream expression.
 ```
-POST 'https://www.testuri.com' body stream FileToStream('image.jpg');
+POST "https://www.testuri.com" body stream FileToStream('image.jpg');
 
 //this is equivalent:
-POST 'https://www.testuri.com' body FileToStream('image.jpg');
+POST "https://www.testuri.com" body FileToStream('image.jpg');
 ```
