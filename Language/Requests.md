@@ -25,6 +25,7 @@ POST "https://www.testuri.com"
 ## httpMethod
 The httpMethod must be be one of the following: GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD, TRACE, CONNECT. It is also possible to provide a dynamically populated string value as long as it can be parsed to one of the known HTTP methods. The following example demonstrates this:
 ```
+$method = "GET";
 if ($id = 1){
     $method = "DELETE";
 }
@@ -67,7 +68,7 @@ The body section supports 4 different kinds of request bodies. This becomes visi
 ```
 body (string | formurlencoded | formdata | stream)? [expression];
 ```
-### Body kind string
+### `string` body
 
 This body kind can be used for textual data in the request body such as JSON content. The 'string' keyword can be omitted if Assertive detects a string expression. 
 ```
@@ -78,20 +79,20 @@ POST "https://www.testuri.com" body string 'this is the content';
 POST "https://www.testuri.com" body '{"key": "value"}';
 
 ```
-### Body kind formurlencoded
+### `formurlencoded` body
 This will send the request body as URL encoded string content:
 ```
 POST "https://www.testuri.com" body formurlencoded {'Firstname': 'John', 'Lastname': 'Doe'};
 ```
 
-### Body kind formdata
+### `formdata` body
 The request body will be sent as multipart formdata when using the formdata keyword. It enables sending a request with a combination of string values and stream values in a single request.
 ```
 POST "https://www.testuri.com" body formdata 
 {'Firstname': 'John', 'Lastname': 'Doe', 'image': FileToStream('image.bmp') }
 ```
 
-### Body kind stream
+### `stream` body
 Send a binary file in the request body. The 'stream' keyword can be omitted if Assertive detects a stream expression.
 ```
 POST "https://www.testuri.com" body stream FileToStream('image.jpg');
