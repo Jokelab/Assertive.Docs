@@ -2,7 +2,7 @@
 layout: default
 title: Conditionals
 parent: Language
-nav_order: 6
+nav_order: 40
 ---
 
 
@@ -20,9 +20,9 @@ Expressions must be boolean expressions.
 ## Examples
 ```
 if ($x = 1){
- //do stuff    
+  //do stuff    
 }
 else{
-//do something else    
+  //do something else    
 }
 ```

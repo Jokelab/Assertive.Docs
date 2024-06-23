@@ -2,7 +2,7 @@
 layout: default
 title: Loops
 parent: Language
-nav_order: 8
+nav_order: 60
 ---
 
 # Loop statements

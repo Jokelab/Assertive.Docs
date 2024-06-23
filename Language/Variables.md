@@ -14,7 +14,7 @@ $myVariable
 ```
 
 
-## Assignment statement
+## Assignment syntax
 ```
 [variable] = [expression];
 ```
