@@ -56,8 +56,10 @@ Example:
 ```
 POST 'http://www.testuri.com' 
 headers 
-    { 'Authorization': BasicAuth('username', 'secretpassword'),
-    { 'otherheader': 3 * 5}
+    { 
+        'Authorization': BasicAuth('username', 'secretpassword'),
+        'OtherHeader': 3 * 5
+     }
  };
 ```
 
