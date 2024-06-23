@@ -23,12 +23,12 @@ POST "https://www.testuri.com"
 ```
 
 ## httpMethod
-The [httpMethod] must be be one of the following: GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD, TRACE, CONNECT. It is also possible to provide a dynamically populated string value as long as it can be parsed to one of the known HTTP methods. The following example demonstrates this:
+The httpMethod must be be one of the following: GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD, TRACE, CONNECT. It is also possible to provide a dynamically populated string value as long as it can be parsed to one of the known HTTP methods. The following example demonstrates this:
 ```
 if ($id = 1){
     $method = "DELETE";
 }
-"{{ $method }}" "https://webhook.site/a6c6dff5-11cd-4647-bec3-f9a771b79984";
+"{{ $method }}" "https://testuri.com";
 ```
 
 ## querySection
