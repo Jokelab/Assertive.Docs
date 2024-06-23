@@ -59,8 +59,7 @@ headers
     { 
         'Authorization': BasicAuth('username', 'secretpassword'),
         'OtherHeader': 3 * 5
-     }
- };
+    };
 ```
 
 ## bodySection
