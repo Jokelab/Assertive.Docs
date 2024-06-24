@@ -11,11 +11,18 @@ Assertive supports a list of built-in functions, but you can also define your ow
 ## Recursion
 Functions can call themselves. Here is an example of a recursive function.
 ```assertive
-//recursive factorial function
-def factorial ($n){
-    if ($n = 0){
-      return 1;
+def fibonacci($n)
+{
+    if ($n < 2){
+    return $n;
     }
-    return $n * factorial($n - 1);
+    
+    return fibonacci($n - 1) + fibonacci($n - 2);
+}
+
+//print fibonacci sequence:
+loop $i from 0 to 10
+{
+    out fibonacci($i);
 }
 ```
