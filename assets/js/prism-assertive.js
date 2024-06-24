@@ -1,4 +1,4 @@
-Prism.languages.dsl = {
+Prism.languages.assertive = {
     'keyword': /\b(def|POST|GET|assert|query|headers|body)\b/,
     'operator': /=|\+|\-|\*|\//,
     'number': /\b\d+\b/,
