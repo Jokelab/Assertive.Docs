@@ -10,7 +10,7 @@ Assertive supports a list of built-in functions, but you can also define your ow
 
 ## Recursion
 Functions can call themselves. Here is an example of a recursive function.
-```
+```assertive
 //recursive factorial function
 def factorial ($n){
     if ($n = 0){

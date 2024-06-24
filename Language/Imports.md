@@ -10,7 +10,7 @@ You can include other Assertive files to reuse (pieces of) script.
 
 ## Syntax
 An import statement must be at the top of an Assertive file.
-```
+```assertive
 import string;
 ```
 

@@ -24,7 +24,7 @@ POST "https://www.testuri.com"
 
 ## httpMethod
 The httpMethod must be be one of the following: GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD, TRACE, CONNECT. It is also possible to provide a dynamically populated string value as long as it can be parsed to one of the known HTTP methods. The following example demonstrates this:
-```
+```assertive
 $method = "GET";
 if ($id = 1){
     $method = "DELETE";
@@ -33,12 +33,12 @@ if ($id = 1){
 ```
 
 ## querySection
-```
+```assertive
 query [expression]
 ```
 This can be used to modify the querystring of a url. The expression must resolve to a dictionary value.
 Example:
-```
+```assertive
 //set a query from a variable
 $x = 3;
 $customQuery = {'id' : $x * 9, 'name':'John'};
@@ -49,12 +49,12 @@ query $customQuery; //performs a query to https://www.testuri.com?id=27&name=Joh
 
 ## headerSection
 Syntax of the header section:
-```
+```assertive
 headers [expression]
 ```
 This can be used to modify the headers of an HTTP request. The expression must resolve to a dictionary value.
 Example:
-```
+```assertive
 POST 'http://www.testuri.com' 
 headers 
     { 
@@ -65,36 +65,36 @@ headers
 
 ## bodySection
 The body section supports 4 different kinds of request bodies. This becomes visible when we look at the syntax. Every kind of request body will be explained below.
-```
+```assertive
 body (string | formurlencoded | formdata | stream)? [expression];
 ```
-### `string` body
+### body `string`
 
 This body kind can be used for textual data in the request body such as JSON content. The 'string' keyword can be omitted if Assertive detects a string expression. 
-```
+```assertive
 //simple text:
 POST "https://www.testuri.com" body string 'this is the content';
 
 //JSON content, string keyword omitted:
 POST "https://www.testuri.com" body '{"key": "value"}';
+```
 
-```
-### `formurlencoded` body
+### body `formurlencoded`
 This will send the request body as URL encoded string content:
-```
+```assertive
 POST "https://www.testuri.com" body formurlencoded {'Firstname': 'John', 'Lastname': 'Doe'};
 ```
 
-### `formdata` body
+### body `formdata`
 The request body will be sent as multipart formdata when using the formdata keyword. It enables sending a request with a combination of string values and stream values in a single request.
-```
+```assertive
 POST "https://www.testuri.com" body formdata 
 {'Firstname': 'John', 'Lastname': 'Doe', 'image': FileToStream('image.bmp') }
 ```
 
-### `stream` body
+### body `stream`
 Send a binary file in the request body. The 'stream' keyword can be omitted if Assertive detects a stream expression.
-```
+```assertive
 POST "https://www.testuri.com" body stream FileToStream('image.jpg');
 
 //this is equivalent:

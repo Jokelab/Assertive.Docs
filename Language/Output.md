@@ -10,7 +10,7 @@ This keyword can be used to write any message to the configured output writers.
 
 ## Syntax
 ```
-output [expression] ;
+out [expression] ;
 ```
 
 ## Examples
