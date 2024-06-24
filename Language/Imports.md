@@ -15,7 +15,7 @@ import string;
 ```
 
 ## Examples
-```
+```assertive
 import "file-in-current-folder.ass";
 import "subfolder/file-in-subfolder.ass";
 import "../file-in-parent-folder.ass";

@@ -9,19 +9,19 @@ nav_order: 20
 Variables are very common in every programming language. Assertive supports variables to enable temporary storage of information during the execution of a script. 
 A variable always starts with a dollar sign (**$**) and is followed by one or more alphanumeric characters, for example: 
 
-```
+```assertive
 $myVariable
 ```
 
 
 ## Assignment syntax
-```
+```assertive
 [variable] = [expression];
 ```
 
 ## Examples
 
-```
+```assertive
 $x = "value for x"; //x will be a string
 $y = 1337;          //y will be numeric
 $res = GET "http://myapi.com/v1"; // HTTP Request and response 
