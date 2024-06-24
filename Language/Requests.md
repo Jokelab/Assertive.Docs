@@ -9,7 +9,7 @@ nav_order: 30
 HTTP requests are primary citizens in the Assertive Scripting language.
 
 ## Syntax
-The high level syntax for HTTP requests is as follows.
+The high level syntax for HTTP requests is as follows. 
 ```
 [httpMethod] string ([querySection] | [headerSection] | [bodySection])* ;
 ```
@@ -29,7 +29,7 @@ $method = "GET";
 if ($id = 1){
     $method = "DELETE";
 }
-"\{{ $method \}}" "https://testuri.com";
+"{{ $method }}" "https://testuri.com";
 ```
 
 ## querySection
@@ -39,11 +39,11 @@ query [expression]
 This can be used to modify the querystring of a url. The expression must resolve to a dictionary value.
 Example:
 ```assertive
-//set a query from a variable
+//send a GET request to https://www.testuri.com?id=27&name=John
 $x = 3;
 $customQuery = {'id' : $x * 9, 'name':'John'};
 GET "https://www.testuri.com" 
-query $customQuery; //performs a query to https://www.testuri.com?id=27&name=John
+query $customQuery;
 
 ```
 
