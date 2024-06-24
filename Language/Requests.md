@@ -15,7 +15,7 @@ The high level syntax for HTTP requests is as follows.
 ```
 
 Example of a request with all options specified:
-```
+```assertive
 POST "https://www.testuri.com"
     query {'id' : 1, 'name' :'Doe'}
     headers {'my-header': 'my-header-value'}

@@ -3,13 +3,20 @@ title: Getting started
 layout: default
 nav_order: 20
 ---
-# Hello world!
+
+# Let's get going
+This page has a little tutorial to get familiar with Assertive Script.
+
+## Install the VSCode extension
+
+## Hello world!
 Every language should start with a decent Hello world. Assertive is no exception:
 ```
 out "Hello world!";
 ```
 
-# A simple request
+# Our first HTTP request
+An HTTP request always starts with a request method, such as GET or POST. 
 ```
 GET "https://www.my-api.com/v1/";
 ```
