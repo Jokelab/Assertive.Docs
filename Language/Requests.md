@@ -17,9 +17,9 @@ The high level syntax for HTTP requests is as follows.
 Example of a request with all options specified:
 ```assertive
 POST "https://www.testuri.com"
-    query {'id' : 1, 'name' :'Doe'}
-    headers {'my-header': 'my-header-value'}
-    body formdata {'Firstname': 'John', 'Lastname': 'Doe'} ;
+query {'id' : 1, 'name' :'Doe'}
+headers {'my-header': 'my-header-value'}
+body formdata {'Firstname': 'John', 'Lastname': 'Doe'} ;
 ```
 
 ## httpMethod
@@ -57,10 +57,10 @@ Example:
 ```assertive
 POST 'http://www.testuri.com' 
 headers 
-    { 
-        'Authorization': BasicAuth('username', 'secretpassword'),
-        'OtherHeader': 3 * 5
-    };
+{ 
+    'Authorization': BasicAuth('username', 'secretpassword'),
+    'OtherHeader': 3 * 5
+};
 ```
 
 ## bodySection

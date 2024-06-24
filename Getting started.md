@@ -11,12 +11,12 @@ This page has a little tutorial to get familiar with Assertive Script.
 
 ## Hello world!
 Every language should start with a decent Hello world. Assertive is no exception:
-```
+```assertive
 out "Hello world!";
 ```
 
 # Our first HTTP request
 An HTTP request always starts with a request method, such as GET or POST. 
-```
+```assertive
 GET "https://www.my-api.com/v1/";
 ```

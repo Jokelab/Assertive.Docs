@@ -22,25 +22,46 @@ Prism.languages.assertive = {
       }
     }
   ],
-  'string': {
-    pattern: /"(?:\\.|[^\\"])*"/,
-    greedy: true,
-    inside: {
-      'interpolation': {
-        pattern: /{{(?:\\.|[^{}])*}}/,
-        inside: {
-          'expression': {
-            pattern: /{{(?:\\.|[^{}])*}}/,
-            inside: null // see below
+  'string': [
+    {
+      pattern: /"(?:\\.|[^\\"])*"/,
+      greedy: true,
+      inside: {
+        'interpolation': {
+          pattern: /{{(?:\\.|[^{}])*}}/,
+          inside: {
+            'expression': {
+              pattern: /{{(?:\\.|[^{}])*}}/,
+              inside: null // see below
+            }
           }
+        },
+        'constant': {
+          pattern: /\\./,
+          alias: 'escape'
         }
-      },
-      'constant': {
-        pattern: /\\./,
-        alias: 'escape'
+      }
+    },
+    {
+      pattern: /'(?:\\.|[^\\'])*'/,
+      greedy: true,
+      inside: {
+        'interpolation': {
+          pattern: /{{(?:\\.|[^{}])*}}/,
+          inside: {
+            'expression': {
+              pattern: /{{(?:\\.|[^{}])*}}/,
+              inside: null // see below
+            }
+          }
+        },
+        'constant': {
+          pattern: /\\./,
+          alias: 'escape'
+        }
       }
     }
-  },
+  ],
   'keyword': [
     {
       pattern: /\b(?:assert|else|if|while|loop|from|to|parallel|each|return|break|continue|def|each|in|headers|query|body|string|formurlencoded|formdata|stream)\b/,
@@ -86,4 +107,5 @@ Prism.languages.assertive = {
   }
 };
 
-Prism.languages.assertive.string.inside.interpolation.inside.expression.inside = Prism.languages.assertive;
+Prism.languages.assertive.string[0].inside.interpolation.inside.expression.inside = Prism.languages.assertive;
+Prism.languages.assertive.string[1].inside.interpolation.inside.expression.inside = Prism.languages.assertive;
