@@ -14,9 +14,8 @@ Functions can call themselves. Here is an example of a recursive function.
 def fibonacci($n)
 {
     if ($n < 2){
-    return $n;
+      return $n;
     }
-    
     return fibonacci($n - 1) + fibonacci($n - 2);
 }
 
