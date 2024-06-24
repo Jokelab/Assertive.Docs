@@ -1,9 +1,89 @@
 Prism.languages.assertive = {
-    'keyword': /\b(def|if|else|break|continue|return|import|out|while|each|loop|from|to|POST|GET|assert|query|headers|body|formdata|formurlencoded|stream|string)\b/,
-    'operator': /=|\+|\-|\*|\//,
-    'number': /\b\d+\b/,
-    'string': /"(?:\\.|[^\\"])*"/,
-    'comment': /\/\/.*/,
-    'function': /\b[A-Za-z_]\w*(?=\()/,
-    'variable': /\b$[A-Za-z_]\w*\b/
-  };
+  'comment': [
+    {
+      pattern: /\/\*[\s\S]*?\*\//,
+      greedy: true,
+      inside: {
+        'punctuation': {
+          pattern: /^\/\*|\*\/$/,
+          alias: 'comment'
+        }
+      }
+    },
+    {
+      pattern: /(^|[^\\])\/\/.*/,
+      lookbehind: true,
+      greedy: true,
+      inside: {
+        'punctuation': {
+          pattern: /^\/\//,
+          alias: 'comment'
+        }
+      }
+    }
+  ],
+  'string': {
+    pattern: /"(?:\\.|[^\\"])*"/,
+    greedy: true,
+    inside: {
+      'interpolation': {
+        pattern: /{{(?:\\.|[^{}])*}}/,
+        inside: {
+          'expression': {
+            pattern: /{{(?:\\.|[^{}])*}}/,
+            inside: null // see below
+          }
+        }
+      },
+      'constant': {
+        pattern: /\\./,
+        alias: 'escape'
+      }
+    }
+  },
+  'keyword': [
+    {
+      pattern: /\b(?:assert|else|if|while|loop|from|to|parallel|each|return|break|continue|def|each|in|headers|query|body|string|formurlencoded|formdata|stream)\b/,
+      alias: 'control'
+    },
+    {
+      pattern: /\b(?:and|or|not|<=|>=|<|>|!=|=|\+|-)\b/,
+      alias: 'operator'
+    },
+    {
+      pattern: /\b(?:true|false)\b/,
+      alias: 'boolean'
+    },
+    {
+      pattern: /\b(?:GET|POST|PUT|DELETE|PATCH|OPTIONS|HEAD|TRACE|CONNECT)\b/,
+      alias: 'http-method'
+    }
+  ],
+  'variable': {
+    pattern: /\$[a-zA-Z_][a-zA-Z0-9_]*/,
+    alias: 'variable'
+  },
+  'function': {
+    pattern: /\b[A-Za-z_][A-Za-z0-9_]*\(?[^\)]*\)?/,
+    inside: {
+      'entity': {
+        pattern: /^[A-Za-z_][A-Za-z0-9_]*/,
+        alias: 'function-name'
+      }
+    }
+  },
+  'constant': {
+    pattern: /\b(?:true|false|GET|POST|PUT|DELETE|PATCH|OPTIONS|HEAD|TRACE|CONNECT)\b/,
+    alias: 'constant'
+  },
+  'number': {
+    pattern: /\b\d+\b/,
+    alias: 'number'
+  },
+  'operator': {
+    pattern: /\b(?:and|or|not|<=|>=|<|>|!=|=|\+|-)\b/,
+    alias: 'operator'
+  }
+};
+
+Prism.languages.assertive.string.inside.interpolation.inside.expression.inside = Prism.languages.assertive;
