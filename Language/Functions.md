@@ -6,8 +6,7 @@ nav_order: 45
 ---
 
 # Functions
-Assertive supports a list of built-in functions, but you can also define your own functions which we will refer to as user-defined functions.
-This page is about user-defined functions. In it's most basic form, a function allows you to combine multiple statements together and assign a name to it. Whenever this name is called, the interpreter will execute all statements inside the function. Functions can also compute values and return them, so the caller can its result for subsequent computations.
+Assertive supports a list of built-in functions, but you can also define your own functions which we will refer to as _user-defined_ functions. This page is about the latter. In its most basic form a function combines multiple statements. Because a function has a name, it can be called by this name so the interpreter executes all statements inside the function. Functions can also compute values and return them, so the caller can use its result for subsequent computations.
 
 ## Syntax
 ```assertive
@@ -20,8 +19,8 @@ Functions that don't need arguments can be defined and invoked as illustrated he
 //function definition that performs two requests
 def myFunction
 {
-  GET "http://www.testuri/id/1";
-  GET "http://www.testuri/id/2";
+  GET "https://www.testuri/id/1";
+  GET "https://www.testuri/id/2";
 }
 
 //invoke the function like this:
@@ -35,7 +34,7 @@ myFunction;
 //function definition that uses the $id argument
 def myFunction($id)
 {
-  GET "http://www.testuri/id/\{\{$id\}\}";
+  GET "https://www.testuri/id/{% raw %}{{ $id }}{% endraw %}";
 }
 
 //invoke the function like this:
