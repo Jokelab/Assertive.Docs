@@ -60,7 +60,7 @@ def parent
   }
 }
 
-//from here it's possible to invoke the parent. 
+//from here it's possible to invoke the parent, but you cannot call childA or childB
 parent;
 ```
 
