@@ -35,7 +35,7 @@ myFunction;
 //function definition that uses the $id argument
 def myFunction($id)
 {
-  GET "http://www.testuri/id/{{$id}}";
+  GET "http://www.testuri/id/\{\{$id\}\}";
 }
 
 //invoke the function like this:
@@ -48,11 +48,11 @@ It is not possible to invoke a child function declared inside a parent function.
 ```assertive
 def parent
 {
-  //from here it is possible to invoke the functions defined in this parent (such as childA or parent).
+  //from here it is possible to invoke the functions in the current scope (such as childA) or a parent function
   childA;
 
   def childA{
-    //the child functions can call each other (such as childB or parent)
+    //the child functions can call each other (such as childB) or a parent function
     childB;
   }
 
@@ -60,8 +60,20 @@ def parent
   }
 }
 
-//from here it's possible to invoke the parent, but you cannot call childA or childB
+//from here it's possible to invoke the parent, but you can NOT call childA or childB
 parent;
+```
+
+## Returning values
+The return keyword allows to return the value of the expression that follows it.
+```assertive
+//calculate the sum of two numbers
+def sum($x, $y){
+  return $x + $y;
+}
+
+//prints "8"
+out sum(3, 5);
 ```
 
 ## Recursion
