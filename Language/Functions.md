@@ -44,8 +44,7 @@ myFunction(1);
 
 ## Nested functions
 Function definitions can be nested. Child functions can invoke their siblings and parent functions. 
-It is not possible to invoke a child function from a parent function. This is useful when writing reusable scripts that require encapsulation. 
-The parent functions can be called from the calling scripts, while the child functions are hidden.
+It is not possible to invoke a child function declared inside a parent function. This is useful when writing reusable scripts that require some level of encapsulation.
 ```assertive
 def parent
 {
