@@ -29,7 +29,7 @@ $method = "GET";
 if ($id = 1){
     $method = "DELETE";
 }
-"{{ $method }}" "https://testuri.com";
+"{% raw %}{{ $method }}{% endraw %}" "https://testuri.com";
 ```
 
 ## querySection
