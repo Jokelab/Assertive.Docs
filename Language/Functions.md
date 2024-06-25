@@ -13,8 +13,8 @@ Assertive supports a list of built-in functions, but you can also define your ow
 def ID "description string"? (parameter(, parameter)*)? { [statement]* }
 ```
 
-## Basic function without arguments
-Functions that don't need arguments can be defined and invoked as illustrated here:
+## Basic function without parameters
+Functions that don't need any parameters can be defined and invoked as illustrated here:
 ```assertive
 //function definition that performs two requests
 def myFunction
@@ -26,12 +26,13 @@ def myFunction
 //invoke the function like this:
 myFunction;
 
-//it is also possible to invoke the function with an empty argument list
+//or like this since the list of parameters is empty:
+myFunction();
 ```
 
-## Function with arguments
+## Function with parameters
 ```assertive
-//function definition that uses the $id argument
+//function definition that uses the $id parameter
 def myFunction($id)
 {
   GET "https://www.testuri/id/{% raw %}{{ $id }}{% endraw %}";
