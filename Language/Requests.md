@@ -23,7 +23,7 @@ body formdata {'Firstname': 'John', 'Lastname': 'Doe'} ;
 ```
 
 ## httpMethod
-The httpMethod must be be one of the following: GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD, TRACE, CONNECT. It is also possible to provide a dynamically populated string value as long as it can be parsed to one of the known HTTP methods. The following example demonstrates this:
+The httpMethod must be be one of the following: `GET`, `POST`, `PUT`, `DELETE`, `PATCH`, `OPTIONS`, `HEAD`, `TRACE`, `CONNECT`. It is also possible to provide a dynamically populated string value as long as it can be parsed to one of the known HTTP methods. The following example demonstrates this:
 ```assertive
 $method = "GET";
 if ($id = 1){
