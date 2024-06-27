@@ -56,7 +56,7 @@ def main "Loop Starwars characters"
 
 main;
 ```
-The code above generates output similar to the following with the [VSCode extension:]({% link VSCode extension.md %}): ![](assets/img/annotation-function.jpeg)
+The code above generates output similar to the following with the [VSCode extension]({% link VSCode extension.md %}): ![](../assets/img/annotated-function.jpeg)
 
 ## Nested functions
 Function definitions can be nested. Child functions can invoke their siblings and parent functions. 
