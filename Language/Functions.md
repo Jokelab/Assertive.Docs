@@ -42,6 +42,22 @@ def myFunction($id)
 myFunction(1);
 ```
 
+## Annotated functions
+When the description of the function definition has been set, the function is called an _annotated function_. Assertive will collect metadata about the requests when an annotated function is invoked. This applies to all direct and indirect requests that are made as a result of a function invocation. As soon as the function completes, information like the total number of requests, the total time it took for all requests to complete and the average time per request will be automatically written to the configured output writers.
+```assertive
+$host = "https://swapi.dev/api/";
+def main "Loop Starwars characters"
+{
+    loop $personId from 1 to 5
+    {
+        GET "{{ $host }}/people/{{ $personId }}";
+    }
+}
+
+main;
+```
+The code above generates output similar to the following with the [VSCode extension:]({% link VSCode extension.md %}): ![](assets/img/annotation-function.jpeg)
+
 ## Nested functions
 Function definitions can be nested. Child functions can invoke their siblings and parent functions. 
 It is not possible to invoke a child function declared inside a parent function. This is useful when writing reusable scripts that require some level of encapsulation.
