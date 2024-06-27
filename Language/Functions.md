@@ -48,12 +48,12 @@ When the description of the function definition has been set, the function is ca
 $host = "https://swapi.dev/api/";
 def main "Loop Starwars characters"
 {
-    loop $personId from 1 to 5
+    loop $personId from 1 to 3
     {
-        GET "{% raw %}{{ $host }}{% endraw %}/people/{% raw %}{{ $personId }}{% endraw %}";
+        $person = GET "{% raw %}{{ $host }}{% endraw %}/people/{% raw %}{{ $personId }}{% endraw %}";
+        out JsonPath($person, "$.name");
     }
 }
-
 main;
 ```
 The code above generates output similar to the following with the [VSCode extension]({% link VSCode extension.md %}): ![](../assets/img/annotated-function.jpeg)
