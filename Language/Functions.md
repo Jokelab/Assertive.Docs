@@ -50,7 +50,7 @@ def main "Loop Starwars characters"
 {
     loop $personId from 1 to 5
     {
-        GET "{{ $host }}/people/{{ $personId }}";
+        GET "{% raw %}{{ $host }}{% endraw %}/people/{% raw %}{{ $personId }}{% endraw %}";
     }
 }
 
