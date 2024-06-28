@@ -29,7 +29,7 @@ out "Hello world!";
 we will now modify the code so we won't send a greeting to the entire world, but to someone special.
 ```assertive
 $name = "John";
-out "Hello, {{ $name }}!";
+out "Hello, {% raw %}{{ $name }}{% endraw %}!";
 ```
 - Run the script again to see how the variable is replaced inside the string.
 - More information about variables can be found [here]({% link Language/Variables.md %}).
