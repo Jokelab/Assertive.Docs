@@ -13,14 +13,14 @@ The extension supports:
 - Code snippets to speed up development
 - A Language Server Protocol [LSP](https://microsoft.github.io/language-server-protocol/) implementation that analyses the script. Any discovered errors will be reported in the Problems window.
 
-# Installation
+## Installation instructions
 The VSCode extension is not yet available on the VSCode marketplace because it still needs a lot of development.
 However, you are encouraged to download the current version of the extension and install it manually. Any feedback is more than welcome!
 
-Installation instructions:
 - Download the [.vsix file](https://drive.google.com/file/d/1H9i0Fu63HWK8lHtEwxHai8QcJOiG3jh7/view?usp=sharing).
 - Open VSCode
 - Go to the **Extensions** view.
 - Click **Views and More Actions** (the 3 dots)
 - Click **Select Install from VSIX...**
 - Select the downloaded vsix file to install the extension.
+- To activate the extension, create a new file with the **.ass** file extension.
