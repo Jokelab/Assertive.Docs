@@ -44,7 +44,8 @@ $host = "https://swapi.dev/api/";
 //here we set the id of the person we want to get
 $id = 1;
 ```
-- Next, add code that peforms an HTTP GET request and stores the response in a variable called $person
+- Next, add code that peforms an HTTP GET request and stores the response in a variable called `$person`.
+
 ```assertive
 //perform GET request
 $person = GET "{% raw %}{{ $host }}{% endraw %}/people/{% raw %}{{ $id }}{% endraw %}";
@@ -72,6 +73,7 @@ out "Hello, {% raw %}{{ $name }}{% endraw %}!";
 ## Functions
 To make the code above reusable, we can wrap it into a function. In Assertive script, a function always starts with the `def` keyword and is followed by a name. Parameters are enclosed in parenthesis.
 - Consider the following code to see how the code we used earlier is now wrapped in a function called `getName`.
+
 ```assertive
 //declare a $host variable
 $host = "https://swapi.dev/api/";
@@ -86,6 +88,7 @@ def getName($id){
 //output the name of person 2
 out getName(2);
 ```
+
 - More information about functions can be found [here]({% link Language/Functions.md %}).
 
 ## Loops
