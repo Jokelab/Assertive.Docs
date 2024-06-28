@@ -78,26 +78,50 @@ To make the code above reusable, we can wrap it into a function. In Assertive sc
 //declare a $host variable
 $host = "https://swapi.dev/api/";
 
+//declare a function that gets the name of a Starwars person by its ID
 def getName($id){
     //perform the GET request and store the response in the $person variable
     $person = GET "{% raw %}{{ $host }}{% endraw %}/people/{% raw %}{{ $id }}{% endraw %}";
-    //extract the name and send it to the output
+    //return the name and send it to the output
     return JsonPath($person, "$.name"); 
 }
 
-//output the name of person 2
+//call the function and send the result to the output
 out getName(2);
 ```
 
 - More information about functions can be found [here]({% link Language/Functions.md %}).
 
-## Loops
-Assertive also supports control-flow statements like [conditional] ({% link Language/Conditionals.md %}) and [loop] ({% link Language/Loops.md %}) statements.
-We will now demonstrate how we can show the name of the first 10 people by calling the function we created earlier.
+## Asserts
+Assertive supports a special `assert` keyword. This keyword can be used to test a certain condition and report whether or not the test passed or failed. We will modify the function above to assert if the response was 200 (OK).
 ```assertive
-loop $id from 1 to 10
+def getName($id){
+    //perform the GET request and store the response in the $person variable
+    $person = GET "{% raw %}{{ $host }}{% endraw %}/people/{% raw %}{{ $id }}{% endraw %}";
+    //get the statuscode of the response
+    
+    //assert that it was ok
+    assert StatusCode($person) = 200 "Starwars person fetched";
+
+    //return the name and send it to the output
+    return JsonPath($person, "$.name"); 
+}
+```
+- More information about asserts can be found [here]({% link Language/Asserts.md %}).
+
+## Loops
+Assertive also supports control-flow statements like [conditional]({% link Language/Conditionals.md %}) and [loop]({% link Language/Loops.md %}) statements.
+We will now demonstrate how we can show the name of the first 5 people by calling the function we created earlier.
+```assertive
+loop $id from 1 to 5
 {
     out getName($id);
 }
 ```
+After executing this code, your output window should show something similar to this:
+
+![](/assets/img/getting-started.jpeg)
+
+---
+You have made it until the end of our getting started tutorial! To explore all features of Assertive Script, visit the [language]({% link Language/index.md %}) page.
 
