@@ -14,13 +14,13 @@ Welcome to the home of the documentation for the Assertive scripting language: a
 
 
 ## Why yet another language?
-While there are several great tools available for HTTP request testing, they seem to be rather limited when it comes to integration into the software development lifecycle. To overcome this gap, Assertive is built with the following principles in mind:
+While there are several great tools available for HTTP request testing, they seem to be rather limited when it comes to integration into the software development lifecycle. To overcome this gap, Assertive Script is built with the following principles in mind:
 
 ### Automate everything
 Having a test definition is one thing, but running it manually is not considered to be a DevOps best practice. Assertive scripts can run anywhere you like without modification: on your local machine, in the cloud or on a build server as part of your CI/CD pipeline. 
 
 ### Versioning and collaboration
-Versioning of any software artifact should happen where it belongs: in a version control system such as GIT. There is a 1-to-1 relationship between tests and the code you're testing so it makes sense to keep them inline. Having your tests inside a VCS makes sure you can easily distribute your tests to 
+Versioning of any software artifact should happen where it belongs: in a version control system (VCS) such as Git. There is a 1-to-1 relationship between test cases and the code you are testing so it makes sense to keep them in sync. Having your tests inside a VCS makes sure you can easily distribute your tests to other engineers.
 
 ### Ease of use
 Tests should be available in your IDE, so you can execute them whenever you need them.
