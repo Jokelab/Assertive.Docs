@@ -32,4 +32,4 @@ $name = "John";
 out "Hello, {{ $name }}!";
 ```
 - Run the script again to see how the variable is replaced inside the string.
-- More information about variables can be found [here]({% link Variabled.md %}).
+- More information about variables can be found [here]({% link Language/Variables.md %}).
