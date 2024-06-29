@@ -28,7 +28,7 @@ out "Hello world!";
 ## Variables
 We will now modify the code so we won't send a greeting to the entire world, but to someone special.
 ```assertive
-$name = "John";
+$name = "You";
 out "Hello, {% raw %}{{ $name }}{% endraw %}!";
 ```
 - Run the script again to see how the variable is replaced inside the string.
@@ -45,7 +45,6 @@ $host = "https://swapi.dev/api/";
 $id = 1;
 ```
 - Next, add code that peforms an HTTP GET request and stores the response in a variable called `$person`.
-
 ```assertive
 //perform GET request
 $person = GET "{% raw %}{{ $host }}{% endraw %}/people/{% raw %}{{ $id }}{% endraw %}";
@@ -68,7 +67,7 @@ $name = JsonPath($person, "$.name");
 out "Hello, {% raw %}{{ $name }}{% endraw %}!";
 ```
 - Execute the code above and notice  the text **"Hello, Luke Skywalker!"**
-- More information about HTTP requests can be found [here]({% link Language/Requests.md %}).
+- More information about all HTTP request options can be found [here]({% link Language/Requests.md %}).
 
 ## Functions
 To make the code above reusable, we can wrap it into a function. In Assertive script, a function always starts with the `def` keyword and is followed by a name. Parameters are enclosed in parenthesis.
@@ -86,10 +85,10 @@ def getName($id){
     return JsonPath($person, "$.name"); 
 }
 
-//call the function and send the result to the output
+//call the function with an ID of your choice
 out getName(2);
 ```
-
+- Notice how you can use the function to get the name of an arbitrary person
 - More information about functions can be found [here]({% link Language/Functions.md %}).
 
 ## Asserts
@@ -97,7 +96,7 @@ Assertive supports a special `assert` keyword. This keyword can be used to test 
 ```assertive
 def getName($id){
     //perform the GET request and store the response in the $person variable
-    $person = GET "{% raw %}{{ $host }}{% endraw %}/people/{% raw %}{{ $id }}{% endraw %}";
+    $person = GET "{% raw %}{{ $host }}{% endraw %}people/{% raw %}{{ $id }}{% endraw %}";
     //get the statuscode of the response
     
     //assert that it was ok
@@ -111,7 +110,7 @@ def getName($id){
 
 ## Loops
 Assertive also supports control-flow statements like [conditional]({% link Language/Conditionals.md %}) and [loop]({% link Language/Loops.md %}) statements.
-We will now demonstrate how we can show the name of the first 5 people by calling the function we created earlier.
+The next sample demonstrates how we can show the name of the first 5 people by calling the function we created earlier.
 ```assertive
 loop $id from 1 to 5
 {
