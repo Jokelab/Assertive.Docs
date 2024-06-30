@@ -37,16 +37,13 @@ out "Hello, {% raw %}{{ $name }}{% endraw %}!";
 ## Requests
 The following steps will show how to perform a simple HTTP GET request and extract some data from it
 We will demonstrate this with the publicly available [Starwars API](https://swapi.dev). 
-- On top of the file, insert the following two variables:
+- At the top of the file, insert the following two variables:
 ```assertive
-//declare a $host variable
 $host = "https://swapi.dev/api/";
-//here we set the id of the person we want to get
 $id = 1;
 ```
 - Next, add code that peforms an HTTP GET request and stores the response in a variable called `$person`.
 ```assertive
-//perform GET request
 $person = GET "{% raw %}{{ $host }}{% endraw %}/people/{% raw %}{{ $id }}{% endraw %}";
 ```
 - Succesful responses contain a JSON response body with an object that has a key called 'name'. To get its value, we can use the built-in JsonPath function by adding this code:
@@ -59,7 +56,7 @@ So far, we should have the following code:
 $host = "https://swapi.dev/api/";
 //here we set the id of the person we want to get
 $id = 1;
-//perform GET request
+//call Starwars API
 $person = GET "{% raw %}{{ $host }}{% endraw %}/people/{% raw %}{{ $id }}{% endraw %}";
 //extract the name
 $name = JsonPath($person, "$.name");
@@ -74,21 +71,21 @@ To make the code above reusable, we can wrap it into a function. In Assertive sc
 - Consider the following code to see how the code we used earlier is now wrapped in a function called `getName`.
 
 ```assertive
-//declare a $host variable
+//declare $host variable
 $host = "https://swapi.dev/api/";
 
 //declare a function that gets the name of a Starwars person by its ID
 def getName($id){
     //perform the GET request and store the response in the $person variable
     $person = GET "{% raw %}{{ $host }}{% endraw %}/people/{% raw %}{{ $id }}{% endraw %}";
-    //return the name and send it to the output
+    //return the name
     return JsonPath($person, "$.name"); 
 }
 
-//call the function with an ID of your choice
-out getName(2);
+//call the function with an ID of your choice:
+out getName(1);
 ```
-- Notice how you can use the function to get the name of an arbitrary person
+- Execute the code and notice how you can use the function to get the name of an arbitrary person
 - More information about functions can be found [here]({% link Language/Functions.md %}).
 
 ## Asserts
