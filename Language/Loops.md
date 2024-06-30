@@ -36,7 +36,7 @@ This kind of loop allows to execute a block of statements until as long as a cer
 while ([expression]) { [statement]* }
 ```
 The expression should resolve to a boolean value. 
-Example that executes a request until the total response time exceeds 10 seconds:
+The following example executes a `POST` request until the total response time exceeds 10 seconds:
 ```assertive
 $total = 0;
 while($total <= 10000){

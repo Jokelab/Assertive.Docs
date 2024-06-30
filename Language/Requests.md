@@ -70,7 +70,7 @@ body (string | formurlencoded | formdata | stream)? [expression];
 ```
 ### body `string`
 
-This body kind can be used for textual data in the request body such as JSON content. The 'string' keyword can be omitted if Assertive detects a string expression. 
+This body kind can be used for textual data in the request body such as JSON content. The `string` keyword can be omitted if Assertive detects a string expression. 
 ```assertive
 //simple text:
 POST "https://www.testuri.com" body string 'this is the content';
@@ -86,14 +86,14 @@ POST "https://www.testuri.com" body formurlencoded {'Firstname': 'John', 'Lastna
 ```
 
 ### body `formdata`
-The request body will be sent as multipart formdata when using the formdata keyword. It enables sending a request with a combination of string values and stream values in a single request.
+The request body will be sent as multipart formdata when using the `formdata` keyword. It enables sending a request with a combination of string values and stream values in a single request.
 ```assertive
 POST "https://www.testuri.com" body formdata 
 {'Firstname': 'John', 'Lastname': 'Doe', 'image': FileToStream('image.bmp') }
 ```
 
 ### body `stream`
-Send a binary file in the request body. The 'stream' keyword can be omitted if Assertive detects a stream expression.
+Send a binary file in the request body. The `stream` keyword can be omitted if Script Assertive detects a stream expression.
 ```assertive
 POST "https://www.testuri.com" body stream FileToStream('image.jpg');
 
