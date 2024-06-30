@@ -72,7 +72,7 @@ loop variable? from [expression] to [expression] (parallel [expression])? { [sta
 The parallel expression should resolve to a numeric value. The number represents the _maximum_ number of parallel executions of the statement block. The actual number is dependent on system resources.
 
 {: .warning }
-Parallel loops usually execute code on different threads. It is not allowed to execute code that modifies shared state (e.g. variables) declared outside the parallel loop. Violating this constraint would result in race conditions. When detected, Assertive Script will exit with a runtime error.
+Parallel loops usually execute code on different threads. It is not allowed to execute code that modifies shared state (e.g. variables) declared outside the parallel loop. Violating this constraint could introduce race conditions. When detected, Assertive Script will exit with a runtime error.
 
 Example:
 ```assertive
