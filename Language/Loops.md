@@ -12,7 +12,7 @@ There are different loop statements within the Assertive scripting language. Eac
 The simplest loop statement is meant to execute a block of statements for a fixed amount of times.
 
 ```assertive
-loop variable? FROM [expression] to [expression] { [statement]* };
+loop variable? from [expression] to [expression] { [statement]* };
 ```
 The from and to expressions should resolve to numeric values. The from and to values are inclusive bounds, so Assertive script will execute the following `POST` request 10 times: 
 ```assertive
@@ -67,7 +67,7 @@ Experimental
 
 The basic loop syntax can be extended with the `parallel` keyword. The complete syntax looks like this:
 ```assertive
-loop variable? FROM [expression] to [expression] (parallel [expression])? { [statement]* };
+loop variable? from [expression] to [expression] (parallel [expression])? { [statement]* };
 ```
 The parallel expression should resolve to a numeric value. The number represents the _maximum_ number of parallel executions of the statement block. The actual number is dependent on system resources.
 
