@@ -7,11 +7,11 @@ nav_order: 60
 # VSCode extension
 To simplify Assertive Script development, a Visual Studio Code extension has been created with the following features:
 The extension supports:
-- Syntax highlighting
+- Syntax highlighting.
 - A command to call the Assertive interpreter. Keyboard shortcut: ctrl+alt+a on Windows and Linux or shift+cmd+a on macOS.
-- An output window tailored for Assertive script
-- Code snippets to speed up development
-- A Language Server Protocol [LSP](https://microsoft.github.io/language-server-protocol/) implementation that analyses the script. Any discovered errors will be reported in the Problems window.
+- An output window tailored for Assertive script.
+- Code snippets to speed up development.
+- A Language Server Protocol ([LSP](https://microsoft.github.io/language-server-protocol/)) implementation that analyses the script. Any discovered errors will be reported in the Problems window.
 
 ## Installation instructions
 The VSCode extension is not yet available on the VSCode marketplace because it still needs a lot of development.
@@ -23,4 +23,5 @@ However, you are encouraged to download the current version of the extension and
 - Click **Views and More Actions** (the 3 dots)
 - Click **Select Install from VSIX...**
 - Select the downloaded vsix file to install the extension.
-- To activate the extension, create a new file with the **.ass** file extension.
+- To activate the extension, create or open a file with the **.ass** file extension.
+- To activate the extension, create or open a file with the **.ass** file extension.
