@@ -89,7 +89,7 @@ out getName(1);
 - More information about functions can be found [here]({% link Language/Functions.md %}).
 
 ## Asserts
-Assertive supports a special `assert` keyword. This keyword can be used to test a certain condition and report whether or not the test passed or failed. We will modify the function above to assert if the response was 200 (OK).
+Assertive supports a special `assert` keyword. This keyword can be used to test a certain condition and automatically report whether the test passed or failed. We will modify the function above to assert if the response statuscode was 200 (OK).
 ```assertive
 def getName($id){
     //perform the GET request and store the response in the $person variable
