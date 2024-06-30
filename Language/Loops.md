@@ -36,7 +36,7 @@ This kind of loop allows to execute a block of statements until as long as a cer
 while ([expression]) { [statement]* }
 ```
 The expression should resolve to a boolean value. 
-Example that executes a request until the total response time exceeds 10 swconds:
+Example that executes a request until the total response time exceeds 10 seconds:
 ```assertive
 $total = 0;
 while($total <= 10000){
@@ -60,13 +60,17 @@ each($day in $days){
 ```
 
 ## Parallel loop 
+{: .d-inline-block }
+
 Experimental
 {: .label .label-yellow }
+
 The basic loop syntax can be extended with the `parallel` keyword. The complete syntax looks like this:
 ```assertive
 loop variable? FROM [expression] to [expression] (parallel [expression])? { [statement]* };
 ```
 The parallel expression should resolve to a numeric value. The number represents the _maximum_ number of parallel executions of the statement block. The actual number is dependent on system resources.
+
 {: .warning }
 Parallel loops usually execute code on different threads. It is not allowed to execute code that modifies shared state (e.g. variables) declared outside the parallel loop. Violating this constraint would result in race conditions. When detected, Assertive Script will exit with a runtime error.
 
