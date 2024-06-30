@@ -35,7 +35,7 @@ out "Hello, {% raw %}{{ $name }}{% endraw %}!";
 - More information about variables can be found [here]({% link Language/Variables.md %}).
 
 ## Requests
-The following steps will show how to perform a simple HTTP GET request and extract some data from it
+The following steps will show how to perform a simple HTTP GET request and extract some data from it.
 We will demonstrate this with the publicly available [Starwars API](https://swapi.dev). 
 - At the top of the file, insert the following two variables:
 ```assertive
@@ -46,7 +46,7 @@ $id = 1;
 ```assertive
 $person = GET "{% raw %}{{ $host }}{% endraw %}/people/{% raw %}{{ $id }}{% endraw %}";
 ```
-- Succesful responses contain a JSON response body with an object that has a key called 'name'. To get its value, we can use the built-in JsonPath function by adding this code:
+- Succesful responses to this URI contain a JSON response body with an object that has a key called `name`. To get its value, we can use the built-in `JsonPath` function by adding this code:
 ```assertive
 $name = JsonPath($person, "$.name");
 ```
