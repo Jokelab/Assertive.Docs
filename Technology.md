@@ -7,18 +7,24 @@ nav_order: 70
 # High level architecture
 The following diagram show how the different components relate to eachother.
 ```mermaid
-flowchart LR
- IDE["`Visual Studio Code Extension
+graph LR
+ IDE["`Visual Studio Code
  _Node.js_`"]
 
 Assertive.LanguageServer["`Assertive.LanguageServer
 _.NET library_`"]
+
 
 Assertive["`Assertive
 _.NET library_`"]
 
 Assertive.Cli["`Assertive.Cli
 _.NET library_`"]
+
+
+IDE <--> Assertive.LanguageServer
+Assertive.LanguageServer --> Assertive
+Assertive.Cli --> Assertive
 ```
 
 | Component        | Description          | 
