@@ -10,8 +10,7 @@ The reason that this language is called Asserive is that it has a dedicated keyw
 
 
 ## Syntax
-
-```assertive
+```
 assert [expression] string? ;
 ```
 

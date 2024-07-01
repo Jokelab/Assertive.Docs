@@ -17,8 +17,8 @@ Violating this constraint will result in an error.
 
 ## Syntax
 An import statement must be at the top of an Assertive file.
-```assertive
-import string;
+```
+import "path string";
 ```
 
 ## Examples

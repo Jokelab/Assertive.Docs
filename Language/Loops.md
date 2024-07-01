@@ -11,7 +11,7 @@ There are different loop statements within the Assertive scripting language. Eac
 ## Basic loop
 The simplest loop statement is meant to execute a block of statements for a fixed amount of times.
 
-```assertive
+```
 loop variable? from [expression] to [expression] { [statement]* };
 ```
 The from and to expressions should resolve to numeric values. The from and to values are inclusive bounds, so Assertive script will execute the following `POST` request 10 times: 
@@ -32,7 +32,7 @@ loop $i from 1 to 10
 
 ## While loop
 This kind of loop allows to execute a block of statements until as long as a certain condition is true.
-```assertive
+```
 while ([expression]) { [statement]* }
 ```
 The expression should resolve to a boolean value. 
@@ -47,7 +47,7 @@ while($total <= 10000){
 
 ## Each loop
 The each loop allows iterating items in a list.
-```assertive
+```
 each (variable in [expression]) { [statement]* }
 ```
 
@@ -66,7 +66,7 @@ Experimental
 {: .label .label-yellow }
 
 The basic loop syntax can be extended with the `parallel` keyword. The complete syntax looks like this:
-```assertive
+```
 loop variable? from [expression] to [expression] (parallel [expression])? { [statement]* };
 ```
 The parallel expression should resolve to a numeric value. The number represents the _maximum_ number of parallel executions of the statement block. The actual number is dependent on system resources.

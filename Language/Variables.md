@@ -7,16 +7,15 @@ nav_order: 20
 
 # Variables
 Variables are very common in every programming language. Assertive supports variables to enable temporary storage of information during the execution of a script. 
-A variable always starts with a dollar sign (**$**) and is followed by one or more alphanumeric characters, for example: 
+A variable always starts with a dollar sign (**$**) and is followed by one or more alphanumeric characters. The first character cannot be a digit. A valid variable looks like this:
 
 ```assertive
 $myVariable
 ```
 
-
 ## Assignment syntax
-```assertive
-[variable] = [expression];
+```
+$variable = [expression];
 ```
 
 ## Examples

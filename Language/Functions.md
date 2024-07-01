@@ -9,8 +9,8 @@ nav_order: 45
 Assertive supports a list of built-in functions, but you can also define your own functions which we will refer to as _user-defined_ functions. This page is about the latter. In its most basic form a function combines multiple statements. Because a function has a name, it can be called by this name so the interpreter executes all statements inside the function. Functions can also compute values and return them, so the caller can use its result for subsequent computations.
 
 ## Syntax
-```assertive
-def ID "description string"? (parameter(, parameter)*)? { [statement]* }
+```
+def name "description string"? ($parameter(, $parameter)*)? { [statement]* }
 ```
 
 ## Basic function without parameters

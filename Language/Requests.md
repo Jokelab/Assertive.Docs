@@ -10,7 +10,7 @@ HTTP requests are primary citizens in the Assertive Scripting language.
 
 ## Syntax
 The high level syntax for HTTP requests is as follows. 
-```assertive
+```
 [httpMethod] string ([querySection] | [headerSection] | [bodySection])* ;
 ```
 Simply put: a request should start with a HTTP method followed by a URI string. The URI can be optionally followed by a query, headers and body section. The requests ends with a semicolon. Each part of the request statement will be explained on this page.
