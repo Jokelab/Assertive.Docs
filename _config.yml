@@ -4,7 +4,7 @@ theme: just-the-docs
 
 url: https://assertivescript.com
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  View on Github: https://github.com/Jokelab/Assertive
 
 # For copy button on code
 enable_copy_code_button: true
