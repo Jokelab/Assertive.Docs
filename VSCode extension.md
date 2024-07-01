@@ -5,11 +5,10 @@ nav_order: 60
 ---
 
 # VSCode extension
-To simplify Assertive Script development, a Visual Studio Code extension has been created with the following features:
-The extension supports:
+To simplify Assertive Script development, we developed a Visual Studio Code extension with the following features:
 - Syntax highlighting.
 - A command to call the Assertive interpreter. Keyboard shortcut: ctrl+alt+a on Windows and Linux or shift+cmd+a on macOS.
-- An output window tailored for Assertive script.
+- An output window tailored for Assertive Script.
 - Code snippets to speed up development.
 - A Language Server Protocol ([LSP](https://microsoft.github.io/language-server-protocol/)) implementation that analyses the script. Any discovered errors will be reported in the Problems window.
 

@@ -6,7 +6,7 @@ nav_order: 50
 ---
 
 # Output
-This keyword can be used to write any message to the configured output writers.
+The `out` keyword can be used to write any message to the configured output writers.
 
 ## Syntax
 ```assertive

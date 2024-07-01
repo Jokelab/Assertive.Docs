@@ -6,7 +6,7 @@ nav_order: 60
 ---
 
 # Loop statements
-There are different loop statements within the Assertive scripting language. Each construct serves a different purpose.
+There are different loop statements in Assertive Script. Each construct serves a different purpose.
 
 ## Basic loop
 The simplest loop statement is meant to execute a block of statements for a fixed amount of times.
@@ -14,7 +14,7 @@ The simplest loop statement is meant to execute a block of statements for a fixe
 ```
 loop variable? from [expression] to [expression] { [statement]* };
 ```
-The from and to expressions should resolve to numeric values. The from and to values are inclusive bounds, so Assertive script will execute the following `POST` request 10 times: 
+The from and to expressions should resolve to numeric values. The from and to values are inclusive bounds, so Assertive Script will execute the following `POST` request 10 times: 
 ```assertive
 loop from 1 to 10
 {

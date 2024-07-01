@@ -8,7 +8,7 @@ nav_order: 20
 This page has a few step-by-step tutorials to help you get familiar with Assertive Script. We highly recommend to follow them in the prescribed order.
 
 ## Prerequisites
-A VSCode extension has been published in order to support a smooth development experience for Assertive scripts. 
+A VSCode extension has been published in order to support a smooth development experience for Assertive Script. 
 Follow the installation instructions on the [VSCode extension page]({% link VSCode extension.md %}) to get the extension.
 Every tutorial on this page assumes that the Assertive VSCode extension is succesfully installed and that you have a running instance of VSCode.
 

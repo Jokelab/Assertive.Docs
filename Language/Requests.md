@@ -6,7 +6,7 @@ nav_order: 30
 ---
 
 # HTTP Requests
-HTTP requests are primary citizens in the Assertive Scripting language.
+HTTP requests are primary citizens in the Assertive Script.
 
 ## Syntax
 The high level syntax for HTTP requests is as follows. 

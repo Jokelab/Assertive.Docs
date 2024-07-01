@@ -6,7 +6,7 @@ nav_order: 50
 ---
 
 # Asserts
-The reason that this language is called Asserive is that it has a dedicated keyword to perform asserts. They are useful to test a condition. Assertive Script will send the result (success or failure) to the configured output writers.
+The reason that this language is called Assertive Script is that it has a dedicated keyword to perform asserts. They are useful to test a condition. Assertive Script will send the result (success or failure) to the configured output writers.
 
 
 ## Syntax
