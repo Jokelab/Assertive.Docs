@@ -8,6 +8,15 @@ nav_order: 70
 The following diagram show how the different components relate to eachother.
 ```mermaid
 graph LR;
+Assertive.LanguageServer["`Assertive.LanguageServer
+_.NET library_`"]
+
+Assertive["`Assertive
+_.NET library_`"]
+
+Assertive.Cli["`Assertive.Cli
+_.NET library_`"]
+
 IDE <--> Assertive.LanguageServer
 Assertive.LanguageServer --> Assertive
 Assertive.Cli --> Assertive
