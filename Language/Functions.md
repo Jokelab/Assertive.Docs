@@ -10,7 +10,7 @@ Assertive supports a list of built-in functions, but you can also define your ow
 
 ## Syntax
 ```
-def name "description string"? ($parameter(, $parameter)*)? { [statement]* }
+def identifier "description string"? ($parameter(, $parameter)*)? { [statement]* }
 ```
 
 ## Basic function without parameters

@@ -11,7 +11,7 @@ HTTP requests are primary citizens in the Assertive Scripting language.
 ## Syntax
 The high level syntax for HTTP requests is as follows. 
 ```
-[httpMethod] string ([querySection] | [headerSection] | [bodySection])* ;
+[httpMethod] "URI string" ([querySection] | [headerSection] | [bodySection])* ;
 ```
 Simply put: a request should start with a HTTP method followed by a URI string. The URI can be optionally followed by a query, headers and body section. The requests ends with a semicolon. Each part of the request statement will be explained on this page.
 Example of a request with all options specified:
@@ -33,7 +33,7 @@ if ($id = 1){
 ```
 
 ## querySection
-```assertive
+```
 query [expression]
 ```
 This can be used to modify the querystring of a url. The expression must resolve to a dictionary value.
@@ -49,7 +49,7 @@ query $customQuery;
 
 ## headerSection
 Syntax of the header section:
-```assertive
+```
 headers [expression]
 ```
 This can be used to modify the headers of an HTTP request. The expression must resolve to a dictionary value.
@@ -65,7 +65,7 @@ headers
 
 ## bodySection
 The body section supports 4 different kinds of request bodies. This becomes visible when we look at the syntax. Every kind of request body will be explained below.
-```assertive
+```
 body (string | formurlencoded | formdata | stream)? [expression];
 ```
 ### body `string`

@@ -23,6 +23,6 @@ $variable = [expression];
 ```assertive
 $x = "value for x"; //x will be a string
 $y = ((4 * 500) - 1000) + 337;  //y will be numeric
-$x = someFunctionCall() + $y; //$x should numeric because of the plus (+) operation
+$z = someFunctionCall() + $y; //$z should numeric because of the plus (+) operation
 $res = GET "http://myapi.com/v1"; // $res contains the HTTP response 
 ```
