@@ -1,5 +1,5 @@
 ---
-title: Dual License agreement
+title: License
 layout: default
 nav_order: 80
 ---
