@@ -76,30 +76,30 @@ $host = "https://swapi.dev/api/";
 
 //declare a function that gets the name of a Starwars person by its ID
 def getName($id){
-    //perform the GET request and store the response in the $person variable
-    $person = GET "{% raw %}{{ $host }}{% endraw %}/people/{% raw %}{{ $id }}{% endraw %}";
-    //return the name
+    //send request and store the response in the $person variable
+    $person = GET "{% raw %}{{ $host }}{% endraw %}people/{% raw %}{{ $id }}{% endraw %}";
+    //return the name from the response body
     return JsonPath($person, "$.name"); 
 }
 
-//call the function with an ID of your choice:
+//call the function with an ID of your choice and output the name:
 out getName(1);
 ```
 - Execute the code and notice how you can use the function to get the name of an arbitrary person
 - More information about functions can be found [here]({% link Language/Functions.md %}).
 
 ## Asserts
-Assertive supports a special `assert` keyword. This keyword can be used to test a certain condition and automatically report whether the test passed or failed. We will modify the function above to assert if the response statuscode was 200 (OK).
+Assertive supports a special `assert` keyword. This keyword can be used to test a certain condition and automatically report whether the test passed or failed. We will modify the function above to assert if the response statuscode was 200 (OK). After the condition, an optional description can be added so Assertive Script will automatically output this description together with the test result.
 ```assertive
 def getName($id){
     //perform the GET request and store the response in the $person variable
     $person = GET "{% raw %}{{ $host }}{% endraw %}people/{% raw %}{{ $id }}{% endraw %}";
     //get the statuscode of the response
     
-    //assert that it was ok
+    //assert that the server replied with 200 (OK)
     assert StatusCode($person) = 200 "Starwars person fetched";
 
-    //return the name and send it to the output
+    //return the name from the response body
     return JsonPath($person, "$.name"); 
 }
 ```
