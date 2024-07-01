@@ -12,7 +12,7 @@ enable_copy_code_button: true
 mermaid:
   # Version of mermaid library
   # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
-  version: "9.1.3"
+  version: "10.9.1"
 
 callouts:
   warning:

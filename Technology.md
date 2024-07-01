@@ -7,7 +7,7 @@ nav_order: 70
 # High level architecture
 The following diagram show how the different components relate to eachother.
 ```mermaid
-graph LR
+graph LR;
 IDE <--> Assertive.LanguageServer
 Assertive.LanguageServer --> Assertive
 Assertive.Cli --> Assertive
