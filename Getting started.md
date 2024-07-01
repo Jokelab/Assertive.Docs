@@ -44,7 +44,7 @@ $id = 1;
 ```
 - Next, add code that peforms an HTTP GET request and stores the response in a variable called `$person`.
 ```assertive
-$person = GET "{% raw %}{{ $host }}{% endraw %}/people/{% raw %}{{ $id }}{% endraw %}";
+$person = GET "{% raw %}{{ $host }}{% endraw %}people/{% raw %}{{ $id }}{% endraw %}";
 ```
 - Succesful responses to this URI contain a JSON response body with an object that has a key called `name`. To get its value, we can use the built-in `JsonPath` function by adding this code:
 ```assertive
@@ -57,7 +57,7 @@ $host = "https://swapi.dev/api/";
 //here we set the id of the person we want to get
 $id = 1;
 //call Starwars API
-$person = GET "{% raw %}{{ $host }}{% endraw %}/people/{% raw %}{{ $id }}{% endraw %}";
+$person = GET "{% raw %}{{ $host }}{% endraw %}people/{% raw %}{{ $id }}{% endraw %}";
 //extract the name
 $name = JsonPath($person, "$.name");
 //send name to the output window
