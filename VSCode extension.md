@@ -24,4 +24,3 @@ However, you are encouraged to download the current version of the extension and
 - Click **Select Install from VSIX...**
 - Select the downloaded vsix file to install the extension.
 - To activate the extension, create or open a file with the **.ass** file extension.
-- To activate the extension, create or open a file with the **.ass** file extension.
