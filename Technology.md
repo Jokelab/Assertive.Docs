@@ -3,9 +3,11 @@ title: Technology
 layout: default
 nav_order: 70
 ---
+# Technology
+Assertive Script consists of several components.
 
-# High level architecture
-The following diagram show how the different components relate to eachother.
+## High level architecture
+The following diagram shows how the different components relate to eachother.
 ```mermaid
 graph LR;
 
@@ -29,8 +31,8 @@ Assertive.Cli --> Assertive
 | Component        | Description          | 
 |:-------------|:------------------|
 | Assertive           | This is the core .NET assembly that contains the lexer, parser and interpreter. The parser and interpreter definitions are written in [ANTLR](https://www.antlr.org/). From this definition, a base C# visitor class is generated with Java. The interpreter and analyser code uses subclasses of this visitor class to visit all statements and expressions. The interpreter is therefore written in pure C# / .NET | 
-| Assertive.LanguageServer | A language server protocol ([LSP](https://microsoft.github.io/language-server-protocol/)) implementation based on [OmniSharp](https://github.com/OmniSharp/csharp-language-server-protocol). This assembly has a direct depency on the Assertive core library. The component can be invoked by any language server client that knows the LSP protocol.|
 | Assertive.Cli           | The command line interface (CLI) to invoke the Assertive interpreter directly from a terminal. It has a direct dependency on the Assertive core library.  | 
+| Assertive.LanguageServer | A language server protocol ([LSP](https://microsoft.github.io/language-server-protocol/)) implementation based on [OmniSharp](https://github.com/OmniSharp/csharp-language-server-protocol). This assembly has a direct depency on the Assertive core library. The component can be invoked by any language server client that knows the LSP protocol.|
 | IDE           | A language server client that runs on Node.js that invokes the Assertive.LanguageServer component. The Visual Studio Code extension code is written in TypeScript.   | 
 
 
