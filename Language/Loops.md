@@ -53,7 +53,7 @@ each (variable in [expression]) { [statement]* }
 
 Example:
 ```assertive
-$days = ["mon", "tue", "wed", "thu", "sat", "sun"];
+$days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 each($day in $days){
     out $day;
 }
