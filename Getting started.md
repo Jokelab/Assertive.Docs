@@ -67,7 +67,7 @@ out "Hello, {% raw %}{{ $name }}{% endraw %}!";
 - More information about all HTTP request options can be found [here]({% link Language/Requests.md %}).
 
 ## Functions
-To make the code above reusable, we can wrap it into a function. In Assertive script, a function always starts with the `def` keyword and is followed by a name. Parameters are enclosed in parenthesis.
+To make the code above reusable, we can wrap it into a function. In Assertive Script, a function always starts with the `def` keyword and is followed by a name. Parameters are enclosed in parenthesis.
 - Consider the following code to see how the code we used earlier is now wrapped in a function called `getName`.
 
 ```assertive

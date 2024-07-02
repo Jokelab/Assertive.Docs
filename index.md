@@ -5,7 +5,7 @@ nav_order: 2
 ---
 
 # Assertive Script
-Welcome to the home of the documentation for the Assertive Script: a domain specific language (DSL) that targets HTTP request testing. Assertive Script allows you to create test cases by *asserting* properties of a response.
+Welcome to the home of the documentation for the Assertive Script: a domain specific language (DSL) that targets HTTP request testing. Assertive Script allows you to create functional test cases by *asserting* properties of a response. It also measures response times out of the box, making it a great tool for performance tests.
 
 ## Code says > 1000 words
 <a href="assets/img/example.jpeg" target="_blank">
